@@ -1,0 +1,174 @@
+name: PlotMe
+main: net.athion.athionplots.AthionPlots
+version: 0.09
+authors: [Empire92, Travis506, ZachBora]
+load: STARTUP
+loadbefore: [Multiverse-Core]
+softdepend: [WorldEdit, Vault, LWC]
+commands:
+   ap:
+     description: List AthionPlots commands
+     usage: /ap
+     aliases: [ap,plotme,plot,plots,athionplots]
+permissions:
+    AthionPlots.use:
+      description: Gives default user commands
+      children:
+        AthionPlots.use.claim: true
+        AthionPlots.use.auto: true
+        AthionPlots.use.home: true
+        AthionPlots.use.info: true
+        AthionPlots.use.comment: true
+        AthionPlots.use.comments: true
+        AthionPlots.use.biome: true
+        AthionPlots.use.clear: true
+        AthionPlots.use.list: true
+        AthionPlots.use.buy: true
+        AthionPlots.use.sell: true
+        AthionPlots.use.auction: true
+        AthionPlots.use.bid: true
+        AthionPlots.use.dispose: true
+        AthionPlots.use.done: true
+        AthionPlots.use.deny: true
+        AthionPlots.use.undeny: true
+        AthionPlots.limit.1: true
+    AthionPlots.admin:
+      description: Gives default administrator commands
+      children:
+        AthionPlots.admin.claim.other: true
+        AthionPlots.admin.home.other: true
+        AthionPlots.admin.tp: true
+        AthionPlots.admin.id: true
+        AthionPlots.admin.clear: true
+        AthionPlots.admin.reset: true
+        AthionPlots.admin.add: true
+        AthionPlots.admin.remove: true
+        AthionPlots.admin.setowner: true
+        AthionPlots.admin.move: true
+        AthionPlots.admin.weanywhere: true
+        AthionPlots.admin.list: true
+        AthionPlots.admin.reload: true
+        AthionPlots.admin.buy: true
+        AthionPlots.admin.sell: true
+        AthionPlots.admin.auction: true
+        AthionPlots.admin.dispose: true
+        AthionPlots.admin.done: true
+        AthionPlots.admin.addtime: true
+        AthionPlots.admin.expired: true
+        AthionPlots.admin.resetexpired: true
+        AthionPlots.admin.deny: true
+        AthionPlots.admin.undeny: true
+        AthionPlots.admin.bypassdeny: true
+        AthionPlots.admin.buildanywhere: true
+    AthionPlots.use.buy:
+      description: Gives the buy command
+    AthionPlots.use.sell:
+      description: Gives the sell command
+    AthionPlots.use.auction:
+      description: Gives the auction command
+    AthionPlots.use.bid:
+      description: Gives the bid command
+    AthionPlots.use.dispose:
+      description: Gives the dispose command
+    AthionPlots.use.done:
+      description: Gives the done command
+    AthionPlots.use.claim:
+      description: Gives the claim command
+    AthionPlots.use.auto:
+      description: Gives the auto claim command
+    AthionPlots.use.home:
+      description: Gives the home command
+    AthionPlots.use.info:
+      description: Gives the info command
+    AthionPlots.use.comment:
+      description: Gives the comment command
+    AthionPlots.use.comments:
+      description: Gives the comments command
+    AthionPlots.use.biome:
+      description: Gives the biome and biomelist command
+    AthionPlots.use.clear:
+      description: Gives the clear command for plots owned
+    AthionPlots.use.list:
+      description: Gives the list command
+    AthionPlots.use.add:
+      description: Gives the add command for plots owned
+    AthionPlots.use.deny:
+      description: Gives the deny command for plots owned
+    AthionPlots.use.remove:
+      description: Gives the remove command for plots owned
+    AthionPlots.use.undeny:
+      description: Gives the undeny command for plots owned
+    AthionPlots.use.protect:
+      description: Gives the protect command
+    AthionPlots.use.merge:
+      description: Allows the player to merge their plots, upto 4x4 at once.
+    AthionPlots.use.schematic:
+      description: Allows the player to load a WorldEdit schematic into their plot.
+    AthionPlots.use.roadmod:
+      description: Allows the player to modify the road between 2 owned plots, or when they merge it.
+    AthionPlots.limit.*:
+      description: Gives unlimited plots
+    AthionPlots.limit.1:
+      description: Gives 1 plot
+    AthionPlots.limit.2:
+      description: Gives 2 plots
+    AthionPlots.limit.3:
+      description: Gives 3 plots
+    AthionPlots.limit.4:
+      description: Gives 4 plots
+    AthionPlots.limit.5:
+      description: Gives 5 plots
+    AthionPlots.limit.10:
+      description: Gives 10 plots
+    AthionPlots.admin.claim.other:
+      description: Gives the claim command for any player
+    AthionPlots.admin.home.other:
+      description: Gives the home command for any players
+    AthionPlots.admin.tp:
+      description: Gives the tp command
+    AthionPlots.admin.id:
+      description: Gives the id command
+    AthionPlots.admin.clear:
+      description: Gives the clear command for any plots
+    AthionPlots.admin.reset:
+      description: Gives the reset command
+    AthionPlots.admin.add:
+      description: Gives the add command for any plots
+    AthionPlots.admin.deny:
+      description: Gives the deny command for any plots
+    AthionPlots.admin.remove:
+      description: Gives the remove command for any plots
+    AthionPlots.admin.undeny:
+      description: Gives the undeny command for any plots
+    AthionPlots.admin.bypassdeny:
+      description: Allows to enter denied plots
+    AthionPlots.admin.setowner:
+      description: Gives the setowner command
+    AthionPlots.admin.move:
+      description: Gives the move command
+    AthionPlots.admin.weanywhere:
+      description: Gives the weanywhere command
+    AthionPlots.admin.list:
+      description: Gives the list command for any players
+    AthionPlots.admin.reload:
+      description: Gives the reload command
+    AthionPlots.admin.buy:
+      description: Gives the buy command
+    AthionPlots.admin.sell:
+      description: Gives the sell command for any plots
+    AthionPlots.admin.auction:
+      description: Gives the auction command for any plots
+    AthionPlots.admin.dispose:
+      description: Gives the dispose command for any plots
+    AthionPlots.admin.done:
+      description: Gives the done command for any plots and the donelist command
+    AthionPlots.admin.addtime:
+      description: Gives the addtime command for any plots
+    AthionPlots.admin.expired:
+      description: Gives the expired command
+    AthionPlots.admin.resetexpired:
+      description: Resets expired plots
+    AthionPlots.admin.buildanywhere:
+      description: Allows to build anywhere in the plot world
+    AthionPlots.admin.schematic.other:
+      description: Allows the posting of a schematic to another users plot.
