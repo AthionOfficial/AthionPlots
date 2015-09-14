@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 public class CommandBlock {
 
     public CommandBlock(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.block") || AthionPlots.cPerms(p, "AthionPlots.use.block")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.block") || AthionPlots.cPerms(p, "plotme.use.block")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -33,7 +33,7 @@ public class CommandBlock {
                         final String playername = p.getName();
                         final String denied = args[1];
 
-                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "AthionPlots.admin.block")) {
+                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "plotme.admin.block")) {
                             if (plot.isDeniedConsulting(denied) || plot.isGroupDenied(denied)) {
                                 AthionCommands.SendMsg(p, AthionCommands.C("WordPlayer") + " " + ChatColor.RED + args[1] + ChatColor.RESET + " " + AthionCommands.C("MsgAlreadyDenied"));
                             } else {

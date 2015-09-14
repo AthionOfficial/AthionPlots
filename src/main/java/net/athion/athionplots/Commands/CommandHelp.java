@@ -21,120 +21,120 @@ public class CommandHelp {
         final List<String> allowed_commands = new ArrayList<>();
 
         allowed_commands.add("limit");
-        if (AthionPlots.cPerms(p, "AthionPlots.use.claim")) {
+        if (AthionPlots.cPerms(p, "plotme.use.claim")) {
             allowed_commands.add("claim");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.claim.other")) {
+        if (AthionPlots.cPerms(p, "plotme.use.claim.other")) {
             allowed_commands.add("claim.other");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.auto")) {
+        if (AthionPlots.cPerms(p, "plotme.use.auto")) {
             allowed_commands.add("auto");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.list")) {
+        if (AthionPlots.cPerms(p, "plotme.use.list")) {
             allowed_commands.add("list");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.home")) {
+        if (AthionPlots.cPerms(p, "plotme.use.home")) {
             allowed_commands.add("home");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.home.other")) {
+        if (AthionPlots.cPerms(p, "plotme.use.home.other")) {
             allowed_commands.add("home.other");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.info")) {
+        if (AthionPlots.cPerms(p, "plotme.use.info")) {
             allowed_commands.add("info");
             allowed_commands.add("biomeinfo");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.comment")) {
+        if (AthionPlots.cPerms(p, "plotme.use.comment")) {
             allowed_commands.add("comment");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.comments")) {
+        if (AthionPlots.cPerms(p, "plotme.use.comments")) {
             allowed_commands.add("comments");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.biome")) {
+        if (AthionPlots.cPerms(p, "plotme.use.biome")) {
             allowed_commands.add("biome");
             allowed_commands.add("biomelist");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.clear") || AthionPlots.cPerms(p, "AthionPlots.admin.clear")) {
+        if (AthionPlots.cPerms(p, "plotme.use.clear") || AthionPlots.cPerms(p, "plotme.admin.clear")) {
             allowed_commands.add("clear");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.done") || AthionPlots.cPerms(p, "AthionPlots.admin.done")) {
+        if (AthionPlots.cPerms(p, "plotme.use.done") || AthionPlots.cPerms(p, "plotme.admin.done")) {
             allowed_commands.add("done");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.done")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.done")) {
             allowed_commands.add("donelist");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.tp")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.tp")) {
             allowed_commands.add("tp");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.id")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.id")) {
             allowed_commands.add("id");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.dispose") || AthionPlots.cPerms(p, "AthionPlots.use.dispose")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.dispose") || AthionPlots.cPerms(p, "plotme.use.dispose")) {
             allowed_commands.add("dispose");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.reset")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.reset")) {
             allowed_commands.add("reset");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.add") || AthionPlots.cPerms(p, "AthionPlots.admin.add")) {
+        if (AthionPlots.cPerms(p, "plotme.use.add") || AthionPlots.cPerms(p, "plotme.admin.add")) {
             allowed_commands.add("add");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.remove") || AthionPlots.cPerms(p, "AthionPlots.admin.remove")) {
+        if (AthionPlots.cPerms(p, "plotme.use.remove") || AthionPlots.cPerms(p, "plotme.admin.remove")) {
             allowed_commands.add("remove");
         }
         if (AthionPlots.allowToBlock) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.block") || AthionPlots.cPerms(p, "AthionPlots.admin.block")) {
+            if (AthionPlots.cPerms(p, "plotme.use.block") || AthionPlots.cPerms(p, "plotme.admin.block")) {
                 allowed_commands.add("deny");
             }
-            if (AthionPlots.cPerms(p, "AthionPlots.use.unblock") || AthionPlots.cPerms(p, "AthionPlots.admin.unblock")) {
+            if (AthionPlots.cPerms(p, "plotme.use.unblock") || AthionPlots.cPerms(p, "plotme.admin.unblock")) {
                 allowed_commands.add("undeny");
             }
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.setowner")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.setowner")) {
             allowed_commands.add("setowner");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.move")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.move")) {
             allowed_commands.add("move");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.weanywhere")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.weanywhere")) {
             allowed_commands.add("weanywhere");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.reload")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.reload")) {
             allowed_commands.add("reload");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.list")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.list")) {
             allowed_commands.add("listother");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.expired")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.expired")) {
             allowed_commands.add("expired");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.addtime")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.addtime")) {
             allowed_commands.add("addtime");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.resetexpired")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.resetexpired")) {
             allowed_commands.add("resetexpired");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.merge")) {
+        if (AthionPlots.cPerms(p, "plotme.use.merge")) {
             allowed_commands.add("merge");
         }
-        if (AthionPlots.cPerms(p, "AthionPlots.use.schematic")) {
+        if (AthionPlots.cPerms(p, "plotme.use.schematic")) {
             allowed_commands.add("schematic");
         }
 
         final AthionMaps pmi = AthionCore.getMap(p);
 
         if (AthionCore.isPlotWorld(p) && ecoon) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.buy")) {
+            if (AthionPlots.cPerms(p, "plotme.use.buy")) {
                 allowed_commands.add("buy");
             }
-            if (AthionPlots.cPerms(p, "AthionPlots.use.sell")) {
+            if (AthionPlots.cPerms(p, "plotme.use.sell")) {
                 allowed_commands.add("sell");
                 if (pmi.CanSellToBank) {
                     allowed_commands.add("sellbank");
                 }
             }
-            if (AthionPlots.cPerms(p, "AthionPlots.use.auction")) {
+            if (AthionPlots.cPerms(p, "plotme.use.auction")) {
                 allowed_commands.add("auction");
             }
-            if (AthionPlots.cPerms(p, "AthionPlots.use.bid")) {
+            if (AthionPlots.cPerms(p, "plotme.use.bid")) {
                 allowed_commands.add("bid");
             }
         }

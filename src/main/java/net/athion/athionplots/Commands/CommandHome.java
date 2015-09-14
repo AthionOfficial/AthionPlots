@@ -21,7 +21,7 @@ public class CommandHome {
     }
 
     private boolean home(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.home") || AthionPlots.cPerms(p, "AthionPlots.admin.home.other")) {
+        if (AthionPlots.cPerms(p, "plotme.use.home") || AthionPlots.cPerms(p, "plotme.admin.home.other")) {
             if (!AthionCore.isPlotWorld(p)) {
                 if (!AthionPlots.allowWorldTeleport) {
                     AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
@@ -83,7 +83,7 @@ public class CommandHome {
 
                     if (args.length == 2) {
                         if (Bukkit.getWorld(args[1]) == null) {
-                            if (AthionPlots.cPerms(p, "AthionPlots.admin.home.other")) {
+                            if (AthionPlots.cPerms(p, "plotme.admin.home.other")) {
                                 playername = args[1];
                                 uuid = null;
                             }
@@ -223,7 +223,7 @@ public class CommandHome {
 
                 if (args.length == 2) {
                     if (Bukkit.getWorld(args[1]) == null) {
-                        if (AthionPlots.cPerms(p, "AthionPlots.admin.home.other")) {
+                        if (AthionPlots.cPerms(p, "plotme.admin.home.other")) {
                             playername = args[1];
                             uuid = null;
                         }

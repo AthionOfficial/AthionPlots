@@ -126,7 +126,7 @@ public class AthionListenerWE implements Listener {
     public void onPlayerInteract(final PlayerInteractEvent event) {
         final Player p = event.getPlayer();
 
-        if (!AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere") && AthionCore.isPlotWorld(p) && !AthionPlots.isIgnoringWELimit(p)) {
+        if (!AthionPlots.cPerms(p, "plotme.admin.buildanywhere") && AthionCore.isPlotWorld(p) && !AthionPlots.isIgnoringWELimit(p)) {
             if (((event.getAction() == Action.LEFT_CLICK_BLOCK) || (event.getAction() == Action.RIGHT_CLICK_BLOCK)) && (p.getItemInHand() != null) && (p.getItemInHand().getType() != Material.AIR)) {
                 final Block b = event.getClickedBlock();
                 final AthionPlot plot = AthionCore.getPlotById(b);

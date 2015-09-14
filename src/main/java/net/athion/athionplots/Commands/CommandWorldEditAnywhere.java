@@ -9,7 +9,7 @@ import org.bukkit.entity.Player;
 public class CommandWorldEditAnywhere {
 
     public CommandWorldEditAnywhere(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.weanywhere")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.weanywhere")) {
             p.getName();
 
             if ((AthionPlots.isIgnoringWELimit(p) && !AthionPlots.defaultWEAnywhere) || (!AthionPlots.isIgnoringWELimit(p) && AthionPlots.defaultWEAnywhere)) {

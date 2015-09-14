@@ -37,7 +37,7 @@ public class CommandSchematic {
         final World world = p.getLocation().getWorld();
 
         if (AthionPlots.allowToSchematic) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.schematic")) {
+            if (AthionPlots.cPerms(p, "plotme.use.schematic")) {
                 if (id.equals("")) {
 
                 } else {
@@ -88,7 +88,7 @@ public class CommandSchematic {
 
                                 if (a1 != null) {
 
-                                    if ((plot.owner == p.getName()) || AthionPlots.cPerms(p, "AthionPlots.admin.schematic.other")) {
+                                    if ((plot.owner == p.getName()) || AthionPlots.cPerms(p, "plotme.admin.schematic.other")) {
                                         try {
                                             AthionCore.clear(world, plot);
                                             final SchematicFormat schematic = SchematicFormat.getFormat(new File(AthionPlots.configpath + "/schematics/", args[2] + ".schematic"));

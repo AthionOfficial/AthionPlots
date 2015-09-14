@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 public class CommandExpired {
 
     public CommandExpired(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.expired")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.expired")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
 

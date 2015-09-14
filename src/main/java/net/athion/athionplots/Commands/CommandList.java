@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 public class CommandList {
 
     public CommandList(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.list")) {
+        if (AthionPlots.cPerms(p, "plotme.use.list")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
 
@@ -21,7 +21,7 @@ public class CommandList {
                 String name;
                 final String pname = p.getName();
 
-                if (AthionPlots.cPerms(p, "AthionPlots.admin.list") && (args.length == 2)) {
+                if (AthionPlots.cPerms(p, "plotme.admin.list") && (args.length == 2)) {
                     name = args[1];
                     AthionCommands.SendMsg(p, AthionCommands.C("MsgListOfPlotsWhere") + " " + ChatColor.BLUE + name + ChatColor.RESET + " " + AthionCommands.C("MsgCanBuild"));
                 } else {

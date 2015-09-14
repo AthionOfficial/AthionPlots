@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 public class CommandSetOwner {
 
     public CommandSetOwner(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.setowner")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.setowner")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {

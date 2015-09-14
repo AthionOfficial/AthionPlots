@@ -21,7 +21,7 @@ public class CommandSell {
             final AthionMaps pmi = AthionCore.getMap(p);
 
             if (pmi.CanSellToBank || pmi.CanPutOnSale) {
-                if (AthionPlots.cPerms(p, "AthionPlots.use.sell") || AthionPlots.cPerms(p, "AthionPlots.admin.sell")) {
+                if (AthionPlots.cPerms(p, "plotme.use.sell") || AthionPlots.cPerms(p, "plotme.admin.sell")) {
                     final Location l = p.getLocation();
                     final String id = AthionCore.getPlotID(l);
 
@@ -30,7 +30,7 @@ public class CommandSell {
                     } else if (!AthionCore.isPlotAvailable(id, p)) {
                         final AthionPlot plot = AthionCore.getPlotById(p, id);
 
-                        if (plot.owner.equalsIgnoreCase(p.getName()) || AthionPlots.cPerms(p, "AthionPlots.admin.sell")) {
+                        if (plot.owner.equalsIgnoreCase(p.getName()) || AthionPlots.cPerms(p, "plotme.admin.sell")) {
                             final World w = p.getWorld();
                             p.getName();
 

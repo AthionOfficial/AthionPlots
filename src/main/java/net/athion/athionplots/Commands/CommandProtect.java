@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 public class CommandProtect {
 
     public CommandProtect(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.protect") || AthionPlots.cPerms(p, "AthionPlots.use.protect")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.protect") || AthionPlots.cPerms(p, "plotme.use.protect")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
 
@@ -27,7 +27,7 @@ public class CommandProtect {
 
                     final String name = p.getName();
 
-                    if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "AthionPlots.admin.protect")) {
+                    if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "plotme.admin.protect")) {
                         if (plot.protect) {
                             plot.protect = false;
                             AthionCore.adjustWall(p.getLocation());

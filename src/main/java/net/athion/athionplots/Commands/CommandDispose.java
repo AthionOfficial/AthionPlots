@@ -17,7 +17,7 @@ import org.bukkit.entity.Player;
 public class CommandDispose {
 
     public CommandDispose(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.dispose") || AthionPlots.cPerms(p, "AthionPlots.use.dispose")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.dispose") || AthionPlots.cPerms(p, "plotme.use.dispose")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -32,7 +32,7 @@ public class CommandDispose {
                     } else {
                         final String name = p.getName();
 
-                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "AthionPlots.admin.dispose")) {
+                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "plotme.admin.dispose")) {
                             final AthionMaps pmi = AthionCore.getMap(p);
 
                             final double cost = pmi.DisposePrice;

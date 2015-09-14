@@ -13,7 +13,7 @@ import org.bukkit.entity.Player;
 public class CommandTeleport {
 
     public CommandTeleport(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.tp")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.tp")) {
             if (!AthionCore.isPlotWorld(p)) {
                 if (!AthionPlots.allowWorldTeleport) {
                     AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));

@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 public class CommandAddPlayer {
 
     public CommandAddPlayer(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.add") || AthionPlots.cPerms(p, "AthionPlots.use.add")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.add") || AthionPlots.cPerms(p, "plotme.use.add")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -30,7 +30,7 @@ public class CommandAddPlayer {
                         final String playername = p.getName();
                         final String allowed = args[1];
 
-                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "AthionPlots.admin.add")) {
+                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "plotme.admin.add")) {
                             if (plot.isAllowedConsulting(allowed) || plot.isGroupAllowed(allowed)) {
                                 AthionCommands.SendMsg(p, AthionCommands.C("WordPlayer") + " " + ChatColor.RED + args[1] + ChatColor.RESET + " " + AthionCommands.C("MsgAlreadyAllowed"));
                             } else {

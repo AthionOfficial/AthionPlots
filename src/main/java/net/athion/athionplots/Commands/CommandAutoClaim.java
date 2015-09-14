@@ -22,7 +22,7 @@ public class CommandAutoClaim {
     }
 
     private boolean auto(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.auto")) {
+        if (AthionPlots.cPerms(p, "plotme.use.auto")) {
             if (!AthionCore.isPlotWorld(p)) {
                 if (!AthionPlots.allowWorldTeleport) {
                     AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
@@ -46,7 +46,7 @@ public class CommandAutoClaim {
 
                     if (w == null) {
                         AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNoPlotworldFound"));
-                    } else if ((AthionCore.getNbOwnedPlot(p, w) >= AthionPlots.getPlotLimit(p)) && !AthionPlots.cPerms(p, "AthionPlots.admin")) {
+                    } else if ((AthionCore.getNbOwnedPlot(p, w) >= AthionPlots.getPlotLimit(p)) && !AthionPlots.cPerms(p, "plotme.admin")) {
                         AthionCommands.SendMsg(p, ChatColor.RED
                         + AthionCommands.C("MsgAlreadyReachedMaxPlots")
                         + " ("
@@ -152,7 +152,7 @@ public class CommandAutoClaim {
 
                 if (w == null) {
                     AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNoPlotworldFound"));
-                } else if ((AthionCore.getNbOwnedPlot(p, w) >= AthionPlots.getPlotLimit(p)) && !AthionPlots.cPerms(p, "AthionPlots.admin")) {
+                } else if ((AthionCore.getNbOwnedPlot(p, w) >= AthionPlots.getPlotLimit(p)) && !AthionPlots.cPerms(p, "plotme.admin")) {
                     AthionCommands.SendMsg(p, ChatColor.RED
                     + AthionCommands.C("MsgAlreadyReachedMaxPlots")
                     + " ("

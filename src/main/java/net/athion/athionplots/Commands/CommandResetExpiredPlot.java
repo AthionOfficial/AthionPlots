@@ -14,7 +14,7 @@ public class CommandResetExpiredPlot {
     private AthionPlots plugin;
 
     public CommandResetExpiredPlot(final CommandSender s, final String[] args) {
-        if (AthionPlots.cPerms(s, "AthionPlots.admin.resetexpired")) {
+        if (AthionPlots.cPerms(s, "plotme.admin.resetexpired")) {
             if (args.length <= 1) {
                 AthionCommands.SendMsg(s, AthionCommands.C("WordUsage")
                 + ": "

@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 public class CommandBiome {
 
     public CommandBiome(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.biome")) {
+        if (AthionPlots.cPerms(p, "plotme.use.biome")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -40,7 +40,7 @@ public class CommandBiome {
                             final AthionPlot plot = AthionCore.getPlotById(p, id);
                             final String playername = p.getName();
 
-                            if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "AthionPlots.admin")) {
+                            if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "plotme.admin")) {
                                 final AthionMaps pmi = AthionCore.getMap(w);
 
                                 double price = 0;

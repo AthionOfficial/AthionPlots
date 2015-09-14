@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 public class CommandComments {
 
     public CommandComments(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.comments")) {
+        if (AthionPlots.cPerms(p, "plotme.use.comments")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else if (args.length < 2) {
@@ -22,7 +22,7 @@ public class CommandComments {
                 } else if (!AthionCore.isPlotAvailable(id, p)) {
                     final AthionPlot plot = AthionCore.getPlotById(p, id);
 
-                    if (plot.ownerId.equals(p.getUniqueId()) || plot.isAllowed(p.getUniqueId()) || AthionPlots.cPerms(p, "AthionPlots.admin")) {
+                    if (plot.ownerId.equals(p.getUniqueId()) || plot.isAllowed(p.getUniqueId()) || AthionPlots.cPerms(p, "plotme.admin")) {
                         if (plot.comments.size() == 0) {
                             AthionCommands.SendMsg(p, AthionCommands.C("MsgNoComments"));
                         } else {

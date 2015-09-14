@@ -120,6 +120,7 @@ public class AthionPlots extends JavaPlugin {
             e.printStackTrace();
         }
 
+        config.set("version", self.getDescription().getVersion());
         usemySQL = config.getBoolean("usemySQL", false);
         mySQLconn = config.getString("mySQLconn", "jdbc:mysql://localhost:3306/minecraft");
         mySQLuname = config.getString("mySQLuname", "root");
@@ -378,7 +379,7 @@ public class AthionPlots extends JavaPlugin {
     }
 
     public static boolean isIgnoringWELimit(final Player p) {
-        if (defaultWEAnywhere && cPerms(p, "AthionPlots.admin.weanywhere")) {
+        if (defaultWEAnywhere && cPerms(p, "plotme.admin.weanywhere")) {
             return !playersignoringwelimit.contains(p.getName());
         } else {
             return playersignoringwelimit.contains(p.getName());

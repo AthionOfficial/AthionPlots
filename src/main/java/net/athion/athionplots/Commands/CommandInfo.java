@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 public class CommandInfo {
 
     public CommandInfo(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.info")) {
+        if (AthionPlots.cPerms(p, "plotme.use.info")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {

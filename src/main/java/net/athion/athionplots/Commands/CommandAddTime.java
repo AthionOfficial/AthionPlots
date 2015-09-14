@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 public class CommandAddTime {
 
     public CommandAddTime(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.addtime")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.addtime")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
 

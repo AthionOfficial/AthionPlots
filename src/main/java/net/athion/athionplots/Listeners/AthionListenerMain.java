@@ -38,7 +38,7 @@ public class AthionListenerMain implements Listener {
             final Player p = event.getPlayer();
             final Location loc = b.getLocation();
             final AthionMaps pmi = AthionCore.getMap(event.getBlock().getLocation());
-            final boolean canbuild = AthionPlots.cPerms(event.getPlayer(), "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(event.getPlayer(), "plotme.admin.buildanywhere");
             final String id = AthionCore.getPlotID(b.getLocation());
 
             /*
@@ -85,7 +85,7 @@ public class AthionListenerMain implements Listener {
             } else {
                 final AthionPlot plot = AthionCore.getMap(p).plots.get(id);
                 if (road) {
-                    if (!AthionPlots.cPerms(p, "AthionPlots.use.roadmod")) {
+                    if (!AthionPlots.cPerms(p, "plotme.use.roadmod")) {
                         p.sendMessage(AthionPlots.caption("ErrCannotBuild"));
                         event.setCancelled(true);
                     }
@@ -114,7 +114,7 @@ public class AthionListenerMain implements Listener {
             final Player p = event.getPlayer();
             final Location loc = b.getLocation();
             final AthionMaps pmi = AthionCore.getMap(loc);
-            final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
             final String id = AthionCore.getPlotID(b.getLocation());
 
             /*
@@ -161,7 +161,7 @@ public class AthionListenerMain implements Listener {
             } else {
                 final AthionPlot plot = AthionCore.getPlotById(p, id);
                 if (road) {
-                    if (!AthionPlots.cPerms(p, "AthionPlots.use.roadmod")) {
+                    if (!AthionPlots.cPerms(p, "plotme.use.roadmod")) {
                         p.sendMessage(AthionPlots.caption("ErrCannotBuild"));
                         event.setCancelled(true);
                     }
@@ -194,7 +194,7 @@ public class AthionListenerMain implements Listener {
                 }
             } else {
                 final Player p = (Player) e;
-                final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+                final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
                 final String id = AthionCore.getPlotID(b.getLocation());
 
                 if (id.equalsIgnoreCase("")) {
@@ -234,7 +234,7 @@ public class AthionListenerMain implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onPlayerBucketEmpty(final PlayerBucketEmptyEvent event) {
-        if (!AthionPlots.cPerms(event.getPlayer(), "AthionPlots.admin.buildanywhere")) {
+        if (!AthionPlots.cPerms(event.getPlayer(), "plotme.admin.buildanywhere")) {
             final BlockFace bf = event.getBlockFace();
             final Block b = event.getBlockClicked().getLocation().add(bf.getModX(), bf.getModY(), bf.getModZ()).getBlock();
             if (AthionCore.isPlotWorld(b)) {
@@ -261,7 +261,7 @@ public class AthionListenerMain implements Listener {
 
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
     public void onPlayerBucketFill(final PlayerBucketFillEvent event) {
-        if (!AthionPlots.cPerms(event.getPlayer(), "AthionPlots.admin.buildanywhere")) {
+        if (!AthionPlots.cPerms(event.getPlayer(), "plotme.admin.buildanywhere")) {
             final Block b = event.getBlockClicked();
             if (AthionCore.isPlotWorld(b)) {
                 final String id = AthionCore.getPlotID(b.getLocation());
@@ -294,7 +294,7 @@ public class AthionListenerMain implements Listener {
             final AthionMaps pmi = AthionCore.getMap(b);
             boolean blocked = false;
             final Player player = event.getPlayer();
-            final boolean canbuild = AthionPlots.cPerms(player, "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(player, "plotme.admin.buildanywhere");
 
             if (event.isBlockInHand() && (event.getAction() == Action.RIGHT_CLICK_BLOCK)) {
                 final ItemStack is = player.getItemInHand();
@@ -339,7 +339,7 @@ public class AthionListenerMain implements Listener {
                 }
             } else {
                 if (pmi.ProtectedBlocks.contains(b.getTypeId())) {
-                    if (!AthionPlots.cPerms(player, "AthionPlots.unblock." + b.getTypeId())) {
+                    if (!AthionPlots.cPerms(player, "plotme.unblock." + b.getTypeId())) {
                         blocked = true;
                     }
                 }
@@ -351,7 +351,7 @@ public class AthionListenerMain implements Listener {
                     final byte itemdata = is.getData().getData();
 
                     if (pmi.PreventedItems.contains("" + itemid) || pmi.PreventedItems.contains("" + itemid + ":" + itemdata)) {
-                        if (!AthionPlots.cPerms(player, "AthionPlots.unblock." + itemid)) {
+                        if (!AthionPlots.cPerms(player, "plotme.unblock." + itemid)) {
                             blocked = true;
                         }
                     }
@@ -568,7 +568,7 @@ public class AthionListenerMain implements Listener {
         if (AthionCore.isPlotWorld(b)) {
             final String id = AthionCore.getPlotID(b.getLocation());
             final Player p = event.getPlayer();
-            final boolean canbuild = AthionPlots.cPerms(event.getPlayer(), "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(event.getPlayer(), "plotme.admin.buildanywhere");
 
             if (id.equalsIgnoreCase("")) {
                 if (!canbuild) {
@@ -602,7 +602,7 @@ public class AthionListenerMain implements Listener {
         if (entity instanceof Player) {
             final Player p = (Player) entity;
 
-            final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
 
             final Location l = event.getEntity().getLocation();
 
@@ -641,7 +641,7 @@ public class AthionListenerMain implements Listener {
 
         if (AthionCore.isPlotWorld(l)) {
             final Player p = event.getPlayer();
-            final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
             final String id = AthionCore.getPlotID(l);
 
             if (id.equalsIgnoreCase("")) {
@@ -679,7 +679,7 @@ public class AthionListenerMain implements Listener {
                 event.setCancelled(true);
             } else {
                 final Player p = (Player) e;
-                final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+                final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
                 final String id = AthionCore.getPlotID(l);
 
                 if (id.equalsIgnoreCase("")) {
@@ -714,7 +714,7 @@ public class AthionListenerMain implements Listener {
 
         if (AthionCore.isPlotWorld(l)) {
             final Player p = event.getPlayer();
-            final boolean canbuild = AthionPlots.cPerms(p, "AthionPlots.admin.buildanywhere");
+            final boolean canbuild = AthionPlots.cPerms(p, "plotme.admin.buildanywhere");
             final String id = AthionCore.getPlotID(l);
 
             if (id.equalsIgnoreCase("")) {

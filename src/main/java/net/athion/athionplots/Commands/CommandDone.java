@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 public class CommandDone {
 
     public CommandDone(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.done") || AthionPlots.cPerms(p, "AthionPlots.admin.done")) {
+        if (AthionPlots.cPerms(p, "plotme.use.done") || AthionPlots.cPerms(p, "plotme.admin.done")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
 
@@ -25,7 +25,7 @@ public class CommandDone {
                         final AthionPlot plot = AthionCore.getPlotById(p, id);
                         final String name = p.getName();
 
-                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "AthionPlots.admin.done")) {
+                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "plotme.admin.done")) {
                             if (plot.finished) {
                                 plot.setUnfinished();
                                 AthionCommands.SendMsg(p, AthionCommands.C("MsgUnmarkFinished"));

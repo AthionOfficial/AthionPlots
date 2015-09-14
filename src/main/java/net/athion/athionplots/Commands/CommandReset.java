@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 public class CommandReset {
 
     public CommandReset(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.reset")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.reset")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {

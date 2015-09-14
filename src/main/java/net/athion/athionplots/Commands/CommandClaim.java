@@ -23,7 +23,7 @@ import org.bukkit.inventory.meta.FireworkMeta;
 public class CommandClaim {
 
     public CommandClaim(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.claim") || AthionPlots.cPerms(p, "AthionPlots.admin.claim.other")) {
+        if (AthionPlots.cPerms(p, "plotme.use.claim") || AthionPlots.cPerms(p, "plotme.admin.claim.other")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -38,7 +38,7 @@ public class CommandClaim {
                     final UUID uuid = p.getUniqueId();
 
                     /*if (args.length == 2) {
-                        if (AthionPlots.cPerms(p, "AthionPlots.admin.claim.other")) {
+                        if (AthionPlots.cPerms(p, "plotme.admin.claim.other")) {
                     		playername = args[1];
                     		uuid = null;
                     	}

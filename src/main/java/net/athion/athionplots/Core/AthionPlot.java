@@ -452,7 +452,7 @@ public class AthionPlot {
         }
 
         if (IncludeGroup && owner.toLowerCase().startsWith("group:") && (p != null)) {
-            if (p.hasPermission("AthionPlots.group." + owner.replace("Group:", ""))) {
+            if (p.hasPermission("plotme.group." + owner.replace("Group:", ""))) {
                 return true;
             }
         }
@@ -471,7 +471,7 @@ public class AthionPlot {
             }
 
             if (IncludeGroup && str.toLowerCase().startsWith("group:") && (p != null)) {
-                if (p.hasPermission("AthionPlots.group." + str.replace("Group:", ""))) {
+                if (p.hasPermission("plotme.group." + str.replace("Group:", ""))) {
                     return true;
                 }
             }
@@ -532,7 +532,7 @@ public class AthionPlot {
             }
 
             if (IncludeGroup && str.toLowerCase().startsWith("group:") && (p != null)) {
-                if (p.hasPermission("AthionPlots.group." + str.replace("Group:", ""))) {
+                if (p.hasPermission("plotme.group." + str.replace("Group:", ""))) {
                     return true;
                 }
             }

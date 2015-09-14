@@ -16,7 +16,7 @@ import org.bukkit.entity.Player;
 public class CommandUnblock {
 
     public CommandUnblock(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.unblock") || AthionPlots.cPerms(p, "AthionPlots.use.unblock")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.unblock") || AthionPlots.cPerms(p, "plotme.use.unblock")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -32,7 +32,7 @@ public class CommandUnblock {
                         final UUID playeruuid = p.getUniqueId();
                         final String denied = args[1];
 
-                        if (plot.ownerId.equals(playeruuid) || AthionPlots.cPerms(p, "AthionPlots.admin.unblock")) {
+                        if (plot.ownerId.equals(playeruuid) || AthionPlots.cPerms(p, "plotme.admin.unblock")) {
                             if (plot.isDeniedConsulting(denied) || plot.isGroupDenied(denied)) {
                                 final World w = p.getWorld();
 

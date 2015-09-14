@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 public class CommandClear {
 
     public CommandClear(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.clear") || AthionPlots.cPerms(p, "AthionPlots.use.clear")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.clear") || AthionPlots.cPerms(p, "plotme.use.clear")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -29,7 +29,7 @@ public class CommandClear {
                     } else {
                         final String playername = p.getName();
 
-                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "AthionPlots.admin.clear")) {
+                        if (plot.owner.equalsIgnoreCase(playername) || AthionPlots.cPerms(p, "plotme.admin.clear")) {
                             final World w = p.getWorld();
 
                             final AthionMaps pmi = AthionCore.getMap(w);

@@ -19,7 +19,7 @@ public class AthionListenerBlock implements Listener {
     public void onPlayerMove(final PlayerMoveEvent event) {
         final Player p = event.getPlayer();
 
-        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "AthionPlots.admin.bypassdeny")) {
+        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "plotme.admin.bypassdeny")) {
             final Location to = event.getTo();
 
             final String idTo = AthionCore.getPlotID(to);
@@ -38,7 +38,7 @@ public class AthionListenerBlock implements Listener {
     public void onPlayerTeleport(final PlayerTeleportEvent event) {
         final Player p = event.getPlayer();
 
-        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "AthionPlots.admin.bypassdeny")) {
+        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "plotme.admin.bypassdeny")) {
             final Location to = event.getTo();
 
             final String idTo = AthionCore.getPlotID(to);
@@ -57,7 +57,7 @@ public class AthionListenerBlock implements Listener {
     public void onPlayerJoin(final PlayerJoinEvent event) {
         final Player p = event.getPlayer();
 
-        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "AthionPlots.admin.bypassdeny")) {
+        if (AthionCore.isPlotWorld(p) && !AthionPlots.cPerms(p, "plotme.admin.bypassdeny")) {
             final String id = AthionCore.getPlotId(p);
 
             if (!id.equalsIgnoreCase("")) {

@@ -18,7 +18,7 @@ import org.bukkit.entity.Player;
 public class CommandComment {
 
     public CommandComment(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.use.comment")) {
+        if (AthionPlots.cPerms(p, "plotme.use.comment")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else if (args.length < 2) {

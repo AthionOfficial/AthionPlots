@@ -19,7 +19,7 @@ import org.bukkit.entity.Player;
 public class CommandDoneList {
 
     public CommandDoneList(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.done")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.done")) {
             final AthionMaps pmi = AthionCore.getMap(p);
 
             if (pmi == null) {

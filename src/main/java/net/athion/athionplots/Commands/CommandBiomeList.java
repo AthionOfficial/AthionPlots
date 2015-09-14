@@ -15,7 +15,7 @@ import org.bukkit.entity.Player;
 public class CommandBiomeList {
 
     public CommandBiomeList(final Player player, final String[] args) {
-        if (AthionPlots.cPerms(player, "AthionPlots.use.biome")) {
+        if (AthionPlots.cPerms(player, "plotme.use.biome")) {
             AthionCommands.SendMsg(player, AthionCommands.C("WordBiomes") + " : ");
 
             //int i = 0;

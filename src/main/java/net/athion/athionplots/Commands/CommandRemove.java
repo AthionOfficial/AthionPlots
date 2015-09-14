@@ -16,7 +16,7 @@ import org.bukkit.entity.Player;
 public class CommandRemove {
 
     public CommandRemove(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.remove") || AthionPlots.cPerms(p, "AthionPlots.use.remove")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.remove") || AthionPlots.cPerms(p, "plotme.use.remove")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else {
@@ -31,7 +31,7 @@ public class CommandRemove {
                         final UUID playeruuid = p.getUniqueId();
                         final String allowed = args[1];
 
-                        if (plot.ownerId.equals(playeruuid) || AthionPlots.cPerms(p, "AthionPlots.admin.remove")) {
+                        if (plot.ownerId.equals(playeruuid) || AthionPlots.cPerms(p, "plotme.admin.remove")) {
                             if (plot.isAllowedConsulting(allowed) || plot.isGroupAllowed(allowed)) {
                                 final World w = p.getWorld();
 

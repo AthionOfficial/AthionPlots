@@ -20,7 +20,7 @@ public class CommandAuction {
             final AthionMaps pmi = AthionCore.getMap(p);
 
             if (pmi.CanPutOnSale) {
-                if (AthionPlots.cPerms(p, "AthionPlots.use.auction") || AthionPlots.cPerms(p, "AthionPlots.admin.auction")) {
+                if (AthionPlots.cPerms(p, "plotme.use.auction") || AthionPlots.cPerms(p, "plotme.admin.auction")) {
                     final String id = AthionCore.getPlotID(p.getLocation());
 
                     if (id.equals("")) {
@@ -30,13 +30,13 @@ public class CommandAuction {
 
                         final String name = p.getName();
 
-                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "AthionPlots.admin.auction")) {
+                        if (plot.owner.equalsIgnoreCase(name) || AthionPlots.cPerms(p, "plotme.admin.auction")) {
                             final World w = p.getWorld();
 
                             if (plot.auctionned) {
                                 if (plot.currentbidder != null) {
                                     if (!plot.currentbidder.equalsIgnoreCase("")) {
-                                        if (!AthionPlots.cPerms(p, "AthionPlots.admin.auction")) {
+                                        if (!AthionPlots.cPerms(p, "plotme.admin.auction")) {
                                             AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgPlotHasBidsAskAdmin"));
                                         } else {
                                             if (plot.currentbidder != null) {

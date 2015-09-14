@@ -1,6 +1,6 @@
 name: PlotMe
 main: net.athion.athionplots.AthionPlots
-version: 0.09
+version: 1.0.0
 authors: [Empire92, Travis506, ZachBora]
 load: STARTUP
 loadbefore: [Multiverse-Core]

@@ -17,7 +17,7 @@ public class CommandBuy {
 
     public CommandBuy(final Player p, final String[] args) {
         if (AthionCore.isEconomyEnabled(p)) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.buy") || AthionPlots.cPerms(p, "AthionPlots.admin.buy")) {
+            if (AthionPlots.cPerms(p, "plotme.use.buy") || AthionPlots.cPerms(p, "plotme.admin.buy")) {
                 final Location l = p.getLocation();
                 final String id = AthionCore.getPlotID(l);
 

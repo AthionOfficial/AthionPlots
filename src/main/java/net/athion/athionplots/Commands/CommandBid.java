@@ -15,7 +15,7 @@ public class CommandBid {
 
     public CommandBid(final Player p, final String[] args) {
         if (AthionCore.isEconomyEnabled(p)) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.bid")) {
+            if (AthionPlots.cPerms(p, "plotme.use.bid")) {
                 final String id = AthionCore.getPlotID(p.getLocation());
 
                 if (id.equals("")) {

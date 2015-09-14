@@ -10,7 +10,7 @@ import org.bukkit.entity.Player;
 public class CommandMove {
 
     public CommandMove(final Player p, final String[] args) {
-        if (AthionPlots.cPerms(p, "AthionPlots.admin.move")) {
+        if (AthionPlots.cPerms(p, "plotme.admin.move")) {
             if (!AthionCore.isPlotWorld(p)) {
                 AthionCommands.SendMsg(p, ChatColor.RED + AthionCommands.C("MsgNotPlotWorld"));
             } else if ((args.length < 3) || args[1].equalsIgnoreCase("") || args[2].equalsIgnoreCase("")) {

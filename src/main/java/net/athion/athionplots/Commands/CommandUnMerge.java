@@ -21,7 +21,7 @@ public class CommandUnMerge {
         final World world = p.getLocation().getWorld();
 
         if (AthionPlots.allowToMerge) {
-            if (AthionPlots.cPerms(p, "AthionPlots.use.merge")) {
+            if (AthionPlots.cPerms(p, "plotme.use.merge")) {
                 if (id.equals("")) {
 
                 } else {
@@ -108,7 +108,7 @@ public class CommandUnMerge {
             }
         }
 
-        /*if (AthionPlots.cPerms(p, "AthionPlots.use.merge")) {
+        /*if (AthionPlots.cPerms(p, "plotme.use.merge")) {
 
         }*/
     }
